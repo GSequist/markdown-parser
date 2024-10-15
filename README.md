@@ -19,7 +19,8 @@ the file-to-markdown api allows you to post files (`.docx`, `.pdf`, `.xls`, `.xl
 
 **api request**: use the following python example to make a post request to the api:
 
-```import requests
+```python
+import requests
 
 file_path = 'path/to/your/document.pdf' <---------------your file
 api_endpoint = 'https://devgs-markdown-parser/upload/'
@@ -36,7 +37,7 @@ response_data = response.json()
 
 response: the API responds with a JSON object containing the Markdown content. simply parse this response to retrieve and use your formatted text.
 
-```
+```python
 # clean print
 if response_data.get("status") == "success":
     markdown_text = response_data.get("markdown", "")
